@@ -1,0 +1,408 @@
+/* 容器 */
+
+.wrap {
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid red;
+  position: relative;
+}
+
+/* 身体 */
+
+.body {
+  width: 250px;
+  height: 400px;
+  border: 5px solid #f8db53;
+  border-radius: 125px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8db53;
+}
+
+/* 头发 */
+
+.hair_1, .hair_2 {
+  width: 130px;
+  height: 100px;
+  border-top: 10px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(48deg);
+}
+
+/* 头发_1 */
+
+.hair_1 {
+  left: 100px;
+  top: 80px;
+}
+
+/* 头发_2 */
+
+.hair_2 {
+  left: 102px;
+  top: 70px;
+}
+
+/* 眼部 */
+
+.eyes {
+  /* width: 100%;
+  height: 100px; */
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 60px;
+  left: 24px;
+}
+
+/* 眼镜 镜框 */
+
+.eyes_l, .eyes_r {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 5px solid #bcc4c2;
+  background-color: #fff;
+  float: left;
+  /* z-index: 2; */
+}
+
+/* 眼镜腿 */
+
+.eyes_l::after, .eyes_r::after {
+  content: '';
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  background-color: #000;
+  top: 40px;
+  z-index: -1;
+}
+
+/* 左眼睛腿 */
+
+.eyes_l::after {
+  left: -29px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 1px;
+}
+
+/* 右眼睛腿 */
+
+.eyes_r::after {
+  right: -30px;
+  width: 31px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+}
+
+/* 瞳孔 */
+
+.l_pupil, .r_pupil {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #81473c;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: border-box;
+  top: 25px;
+}
+
+.l_pupil {
+  left: 10px;
+}
+
+.r_pupil {
+  right: 40px;
+}
+
+/* 白色眼珠 */
+
+.l_sclera, .r_sclera {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 45px;
+  z-index: 2;
+}
+
+.l_sclera {
+  left: 38px;
+}
+
+.r_sclera {
+  right: 52px;
+}
+
+/* 嘴部 */
+
+.mouth {
+  width: 60px;
+  height: 35px;
+  border-radius: 120px 120px 40px 40px;
+  border: 1px solid #1f1a17;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+
+
+.mouth .tooths .tooth1 {
+  border-right: .5px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 25%;
+}
+
+.mouth .tooths .tooth2 {
+  border-right: 1px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 50%;
+}
+
+.mouth .tooths .tooth3 {
+  border-right: 1.5px solid #1f1a17;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 75%;
+}
+
+/* line 188, main.less */
+
+.mouth .tooths .line {
+  width: 100%;
+  top: 48%;
+  border-top: 1px solid #1f1a17;
+  position: absolute;
+}
+
+/* 手臂 */
+
+.hand_l, .hand_r {
+  width: 100px;
+  height: 100px;
+  border: 22px solid #f8db53;
+  position: absolute;
+  border-radius: 30px;
+  /* background-color: #f8db53; */
+  box-sizing: border-box;
+  z-index: -2;
+}
+
+/* 左手 */
+
+.hand_l {
+  left: 50px;
+  top: 300px;
+  transform: rotate(30deg);
+}
+
+/* 右手 */
+
+.hand_r {
+  right: 50px;
+  top: 300px;
+  transform: rotate(-30deg);
+}
+
+/* 裤子 */
+
+.trousers {
+  width: 260px;
+  height: 150px;
+  /* background-color: #4e94b6; */
+  position: absolute;
+  top: 260px;
+  left: -5px;
+}
+
+/* 裤子上半部分 */
+
+.upper_part {
+  width: 160px;
+  height: 50px;
+  background-color: #4e94b6;
+  ;
+  border: 5px solid #4e94b6;
+  ;
+  border-bottom: none;
+  position: absolute;
+  left: 45px;
+  z-index: 999;
+}
+
+/* 裤子下半部分 */
+
+.second_part {
+  width: 260px;
+  height: 86px;
+  background-color: #4e94b6;
+  ;
+  position: absolute;
+  top: 54px;
+  border-top: 5px solid #4e94b6;
+  border-radius: 0 0 120px 120px;
+}
+
+/* 背带 */
+
+.belt_l, .belt_r {
+  width: 100px;
+  height: 20px;
+  background-color: #4e94b6;
+  border: 5px solid #4e94b6;
+  position: absolute;
+  top: -24px;
+}
+
+.belt_l {
+  left: -74px;
+  transform: rotate(35deg);
+  border-bottom-left-radius: 3px;
+}
+
+.belt_r {
+  right: -74px;
+  transform: rotate(-35deg);
+  border-bottom-right-radius: 3px;
+}
+
+.belt_l::after, .belt_r::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+}
+
+.belt_l::after {
+  left: 87px;
+}
+
+.belt_r::after {
+  left: 3px;
+}
+
+/* 口袋 */
+
+.pocket {
+  border: 2px solid #1f1a17;
+  border-radius: 5px 5px 30px 30px;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  position: absolute;
+  z-index: 999;
+  bottom: 40px;
+}
+
+.pocket>div {
+  background: #1f1a17;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.pocket>div>div {
+  width: 10px;
+  height: 10px;
+  border: 5px solid #4e94b6;
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* 腿部 */
+
+.foot_l, .foot_r {
+  width: 40px;
+  height: 70px;
+  background-color: #000;
+  position: absolute;
+  z-index: -1;
+}
+
+/* 左腿 */
+
+.foot_l {
+  left: 155px;
+  top: 490px;
+}
+
+/* 右腿 */
+
+.foot_r {
+  right: 155px;
+  top: 490px;
+}
+
+.foot_r::after, .foot_l::after {
+  content: '';
+  width: 60px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 20px;
+  position: absolute;
+  top: 30px;
+}
+
+.foot_l::after {
+  left: -40px;
+}
+
+.foot_r::after {
+  right: -40px;
+}
+
+.hair_1, .hair_2 {
+  animation: hair 5s linear infinite;
+}
+
+@keyframes hair {
+  10%, 50%, 100% {
+    transform: rotate(48deg);
+  }
+  20%, 80% {
+    transform: rotate(57deg);
+  }
+}
+
+.l_pupil, .r_pupil, .l_sclera, .r_sclera {
+  animation: pupilcss 0.1s ease-in-out infinite;
+}
+
+@keyframes pupilcss {
+  0% {
+    transform: translate(0px)
+  }
+  50% {
+    transform: translate(30px)
+  }
+  100% {
+    transform: translate(0px)
+  }
+}
